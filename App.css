@@ -1,0 +1,93 @@
+CALCULATOR USING REACT
+app.css
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #eee673 10%, #f75e96 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+.calculator {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  width: 350px;
+}
+
+.display {
+  font-size: 2.5rem;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.1), inset 0 -4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  color: #fff;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(4, 187, 44, 0.3);
+  color: rgb(230, 32, 147);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.clear, .equals {
+  background-color: #ff7676;
+  color: white;
+}
+
+.clear:hover, .equals:hover {
+  background-color: #ff4c4c;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+}
